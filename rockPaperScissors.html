@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/icons/code_black_36dp.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="js/rpsScript.js"></script>
+    </head>
+<body>
+    <div>
+        <header class="header">
+            <div class="innerColumn">
+                <div class="headerMain">
+                    <a href="index.html">&lt;/MKED&gt;</a>
+                </div>
+            </div>
+        </header>
+
+<!-- VISUAL BREAK -->
+
+        <main>
+            <div class="innerColumn RPSinnerColumn">
+
+                <div class ="rockPaperScissors">
+                    <div class="rpsCardLabel">Play Rock, Paper, and Scissors</div>
+                    <div class="rpsChoices"></div>
+                    <button class="rpsCardLabel">Play</button>
+                </div>
+
+                <div class ="rpsGame">
+                    <div class="rpsCardLabel">Choices</div>
+                    <div class="rpsChoices">
+                        <div class="rpsChoiceCard"> Human
+                            <select class="rpsChoiceMenu" id="humanChoice">
+                                <option value="">Choose</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Paper">Paper</option>
+                                <option value="Scissors">Scissors</option>
+                              </select>
+                        </div>
+                        <div class="rpsChoiceCard"> Computer
+                            <p  id="computerChoice" class="rpsChoiceMenu"> Waiting for Computer </p>
+                        </div>
+                    </div>
+                    <div id="result">Text here</div>
+                    <button id="playButton" class="rpsCardLabel">Go!</button>
+                </div>
+
+                <div class ="rpsScore">
+                    <div class="rpsCardLabel">Score</div>
+                    <div id="roundCount" class="rpsCardLabel">Round: 0</div>
+                    <div class="rpsChoices">
+                        <div class="rpsChoiceCard"> Human Score
+                            <p id="humanScoreB" class="rpsChoiceMenu"> 0 </p>
+                        </div>
+                        <div class="rpsChoiceCard"> Computer Score
+                            <p id="compScoreB" class="rpsChoiceMenu"> 0 </p>
+                        </div>
+                    </div>
+                    <button id="reset" class="rpsCardLabel">Reset</button>
+                </div>
+
+            </div>
+
+<!-- VISUAL BREAK -->
+
+            <div class="innerColumn">
+                <div class="projects">
+                    <h1> My Projects</h1>
+                    <p> Project Description </p>
+                    <a href="#">Links</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    
+</body>
+</html>

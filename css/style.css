@@ -1,0 +1,809 @@
+/* CSS Index
+--------------------
+01. Imports
+02. Typography
+03. Settings
+04. Modules Settings
+05. Structure
+06. Header
+07. Main
+08. Main // Welcome
+09. Main // Projects
+10. Footer
+11. Project Canvas
+12. Active / Hidden Module
+
+00. Dev Tools
+*/
+
+
+/*--------------------
+01 IMPORTS
+--------------------*/
+
+@import 'meyer-reset.css'; /* Meyer's reset */
+@font-face { font-family: 'Roboto-Black'; src: url('fonts/Roboto-Black.ttf'); font-weight: 900;}
+@font-face { font-family: 'Roboto-Regular'; src: url('fonts/Roboto-Regular.ttf'); font-weight: 400;}
+@font-face { font-family: 'Roboto-Thin'; src: url('fonts/Roboto-Thin.ttf'); font-weight: 100;}
+
+/*--------------------
+02 TYPOGRAPHY
+--------------------*/
+
+.tt-a { /*Titles*/
+    font-family: Roboto-Black;
+    font-size: 6em;
+    font-weight: 900;
+}
+
+.tt-b { /*Sub-Titles*/
+    font-family: Roboto-Black;
+    font-size: 4em;
+    font-weight: 900;
+}
+
+.tt-c { /*Regular-Text*/
+    font-family: Roboto-Regular;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.tt-d { /*Sub-Text & Links*/
+    font-family: Roboto-Thin;
+    font-size: 1.6em;
+    font-weight: 100;
+}
+
+.tt-e { /*Sub-Text & Links*/
+    font-family: Roboto-Regular;
+    font-size: 1.6em;
+}
+
+.outlined {
+    color: #000;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--darkblue);
+}
+
+@media screen and (max-width: 1200px) {
+    .tt-a { font-size: 5em;}
+    .tt-b { font-size: 3em;}
+    .tt-c { font-size: 1.8em;}
+    .tt-d { font-size: 1.4em;}
+    .tt-e { font-size: 1.4em;}
+}
+
+@media screen and (max-width: 760px) {
+    .tt-a { font-size: 4em;}
+    .tt-b { font-size: 2em;}
+    .tt-c { font-size: 1.6em;}
+    .tt-d { font-size: 1.2em;}
+    .tt-e { font-size: 1.2em;}
+}
+
+
+/*--------------------
+03 SETTINGS 
+--------------------*/
+
+html {
+    --white: #f9faf8;
+    --cream: #e5e7eb;
+    --darkblue: #1c364e;
+    --darkblueOp: rgb(28,54,78,0.3);
+    --lightblue: #3882f6;
+    --lightblueOp: rgb(56,130,246,0.3);
+    --red: #d63636;
+    font-size: 10px;
+}
+
+html *{
+    font-family: Roboto-Regular;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto-Black','Roboto-Regular','Roboto-Thin','sans-serif';
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--cream);
+}
+
+.img, img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*--------------------
+04 MODULES SETTINGS
+--------------------*/
+
+button, input[type="submit"], input[type="reset"] {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: var(--darkblue);
+    letter-spacing: 1px;
+    margin: 0 2px;
+    padding: 6px 15px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.2s ease 0s;
+    cursor: inherit;
+}
+
+.human_select button {
+    margin: 2 0px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+button.active,
+button:hover {
+    color: var(--lightblue);
+    text-decoration-line: underline;
+    letter-spacing: 3px;
+    text-underline-offset: 0px;
+}
+
+@media screen and (max-width: 560px) {
+    button, input[type="submit"], input[type="reset"] {
+        letter-spacing: 0.4px;
+        margin: 0 1px;
+        padding: 0px 0px;
+    }
+}
+
+
+/*--------------------
+05 STRUCTURE
+--------------------*/
+
+inner-column {
+    display: block;
+    width: 80%;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+@media screen and (max-width: 680px) {
+    inner-column {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/*--------------------
+06 HEADER 
+--------------------*/
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .menu {
+    color: var(--darkblue);
+    margin: 0;
+    padding: 26px 0;
+    line-height: 1.2;
+}
+
+/*--------------------
+07 MAIN 
+--------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+main inner-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/*--------------------
+08 MAIN // WELCOME
+--------------------*/
+
+.welcome_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--darkblue);
+    /* max-width: 1000px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.welcome_text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.welcome_text, 
+p, h1 {
+    margin-bottom: 0.8em;
+}
+
+.welcome_text, 
+h2 {
+    margin-bottom: 0.2em;
+}
+
+.clock_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 12px solid var(--cream);
+    border-radius: 50%;
+    margin: 30px 30px;
+    position: relative;
+    padding: 12px;
+    box-shadow:
+        0 0 0 4px rgba(22, 120, 211, 0.1),
+        inset 0 0 0 3px var(--darkblue),
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /*account for the height of the clock hands*/
+}
+
+.hand {
+    width: 50%;
+    height: 3px;
+    background: var(--darkblue);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    border-radius: 40%;
+}
+
+/* Main // Welcome Media */
+
+@media screen and (max-width: 760px) {
+
+    .clock {
+        width: 160px;
+        height: 160px;
+        border: 8px solid var(--cream);
+        border-radius: 50%;
+        margin: 18px 18px;
+        position: relative;
+        padding: 18px;
+    }
+
+    .clock-face {
+        transform: translateY(-3px); /*account for the height of the clock hands*/
+    }
+
+    .hand {
+        width: 50%;
+        height: 3px;
+        background: var(--darkblue);
+        position: absolute;
+        top: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        border-radius: 40%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .clock_container {
+        display: none;
+    }
+}
+
+/*--------------------
+09 MAIN // PROJECTS
+--------------------*/
+
+.wrapper{
+    position:relative;
+    z-index:1;
+}
+ 
+.wrapper::after{
+    content:'';
+    position:absolute;
+    background: linear-gradient(0deg, #00000038 30%, #ffffff44 100%);
+    width:100%;
+    height:100%;
+    z-index:-1;
+    left: 0;
+    top: 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects_header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.projects_menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.projects_container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    /* overflow: hidden; */
+}
+
+.project_card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 120px 120px;
+    grid-template-areas: "image" "text";
+    margin: 16px 8px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    transition: 0.2s ease;
+    cursor: pointer;
+    
+}
+
+.card_image {
+    grid-area: image;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card_image img{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card_text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.card_text p {
+    color: grey;
+}
+
+.card_text h2 {
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+.project_card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 460px) {
+    .project_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 12px;
+        border-radius: 18px;
+        background: white;
+        box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.9);
+        text-align: center;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+
+    .project_card:hover {
+        transform: scale(1);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/*--------------------
+10 FOOTER
+--------------------*/
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 48px;
+    /* border: 1px solid blue; */
+}
+
+/*--------------------
+11 PROJECT CANVAS
+--------------------*/
+
+.project_canvas {
+    border: 2px solid var(--darkblue);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    padding: 2em 2em ;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_canvas:active{
+    transition: 1.0s ease;
+}
+
+.game_container {
+    /* border: 2px solid green; */
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "score score score"
+    "main main main"
+    "message message message";
+    gap: 0em 0em;
+}
+
+.game_header {
+    /* border: 2px solid red; */
+    grid-area: header;
+    text-decoration-line: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Score */
+
+.game_score {
+    /* border: 2px solid red; */
+    grid-area: score;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    padding: 0em 1em;
+}
+
+.human_score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    gap: 1em;
+}
+
+.bot_score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+    gap: 1em;
+}
+
+/* Game Health Bar */
+
+.human_health_bar {
+    border: 2px solid gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 2em;
+    padding: 4px;
+    background: #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+
+.bot_health_bar {
+    border: 2px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 2em;
+    padding: 4px;
+    background: #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+
+.h_bar {
+    background: var(--red);
+    width: 100%;
+    height: 12px;
+    position: relative;
+    transition: width .5s linear;
+}
+
+.b_bar {
+    background: var(--red);
+    width: 100%;
+    height: 12px;
+    position: relative;
+    transition: width .5s linear;
+}
+  
+.h_hit {
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    transition: width .5s linear;
+}
+
+.b_hit {
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    transition: width .5s linear;
+}
+
+/* Game */
+
+.game_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin: 0px 8px;
+    position: relative;
+    padding: 10px;
+    flex-shrink: 1;
+    /* box-shadow:
+        0 0 0 4px rgba(22, 120, 211, 0.1),
+        inset 0 0 0 3px var(--darkblue),
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2); */
+}
+
+
+.game_main {
+    /* border: 2px solid  red; */
+    grid-area: main;
+    display: flex;
+    align-items: flex-start;
+}
+
+.human_card, .bot_card  {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    flex-grow: 1;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 2em 1em;
+}
+
+.human_select {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bot_select{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #fff;
+  }
+
+.human_select .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.human_select.option{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.human_select.option::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--darkblue);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#rock:checked:checked ~ .rock,
+#paper:checked:checked ~ .paper,
+#scissors:checked:checked ~ .scissors{
+  border-color: var(--darkblueOp);
+  background: var(--darkblue);
+}
+
+.human_select .option span{
+  font-size: 20px;
+  color: #808080;
+}
+
+.bot_select span{
+    font-size: 20px;
+    color: #808080;
+}
+
+.bot_selection {
+    text-transform: capitalize;
+}
+
+#rock:checked:checked ~ .rock span,
+#paper:checked:checked ~ .paper span,
+#scissors:checked:checked ~ .scissors span{
+  color: #fff;
+}
+
+
+.human_fist {
+    height: 100px;
+    width: 100px;
+    margin: 12px 0px;
+    background-image: url(/img/hands/fist.png);
+    cursor: pointer;
+}
+
+.bot_fist {
+    height: 100px;
+    width: 100px;
+    margin: 12px 0px;
+    background-image: url(/img/hands/fist.png);
+}
+
+.rock_fist {background-image: url(img/hands/rock.gif)}
+.paper_fist {background-image: url(img/hands/paper.gif)}
+.scissors_fist {background-image: url(img/hands/scissors.gif)}
+
+.human_fist:hover {
+    transform: scale(1.2);
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* border: 1px solid red; */
+    grid-area: message;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------
+12 ACTIVE/HIDDEN MODULE
+--------------------*/
+
+#active {
+    /* applies to Project Canvas whenever a module runs */
+
+}
+
+#hidden {
+    /* applies to all modules not running */
+    display: none;
+}
+
+/* 
+--------------------
+00 DEV TOOLS 
+--------------------
+*/
+
+
+
+header, main, footer {
+    /* border: 2px solid red; */
+}
+
+inner-column {
+    /* border: 2px solid green; */
+}
