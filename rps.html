@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+
+    <!-- icon -->
+    <link rel="icon" href="img/icons/code_black_36dp.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/rps.css"> <!-- Main CSS-->
+    <link rel="stylesheet" href="#"> <!-- -->
+    <link rel="stylesheet" href="#"> <!-- Rock Paper Scissors CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- JS -->
+    <script defer src="js/rps.js"></script> <!-- Rock Paper Scissors JS-->
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="app_toolbar">
+            <div class="app_logo">MKED</div>
+            <div class="app_arrow">
+                <img src="img/icons/caret-down-fill.svg" alt="menu arrow" class="svg_white">
+            </div>
+        </div>
+        <div class="user_toolbar">
+            <div class="userName_toolbar">Ezzat</div>
+            <div class="user_arrow">
+                <img src="img/icons/caret-down-fill.svg" alt="menu arrow" class="svg_white">
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Start Game Section -->
+        <div class="game_section">
+            <div class="game_header tt-a"> Rock Paper Scissors</div>
+            <div class="game_main">
+                <div class="game_player">
+                    <div class="player_score" data-total="100" data-value="100">
+                        <div class="human_bar">
+                            <div class="human_hit"></div>
+                        </div>
+                    </div>
+                    <div class="player_main">
+                        <div class="player_name tt-a">Ezzat</div>
+                        <div class="player_avatar">
+                            <img src="img/avatar/avatar.png" alt="">
+                            <img src="img/hands/fist.png" alt="" id="rpsPlay">
+                        </div>
+                    </div>
+                    <form class="player_form">
+                        <input type="radio" name="select" value="rock" id="rock">
+                        <input type="radio" name="select" value="paper" id="paper">
+                        <input type="radio" name="select" value="scissors" id="scissors">
+                        <label for="rock" class="rock">
+                            <span>Rock</span>
+                        </label>
+                        <label for="paper" class="paper">
+                            <span>Paper</span>
+                        </label>
+                        <label for="scissors" class="scissors">
+                            <span>Scissors</span>
+                        </label>
+                    </form>
+                </div>
+                <div class="game_round"></div>
+                <div class="game_bot">
+                    <div class="bot_score" data-total="100" data-value="100">
+                        <div class="bot_bar">
+                            <div class="bot_hit"></div>
+                        </div>
+                    </div>
+                    <div class="bot_main">
+                        <div class="bot_name tt-a">Bot</div>
+                        <div class="bot_avatar">
+                            <img id="botFace" src="img/avatar/thanos.png" alt="">
+                            <img id="botFist" src="img/hands/fist.png" alt="">
+                        </div>
+                    </div>
+                    <div class="bot_form">
+                        <div class="" id="botRock">Rock</div>
+                        <div class="" id="botPaper">Paper</div>
+                        <div class="" id="botScissors">Scissors</div>
+                    </div>
+                </div>
+            </div>
+            <div class="game_text">Choose your weapon. Click your fist when ready!</div>
+            <div class="game_footer">
+                <div class="game_reset" id="rpsReset">Reset</div>
+                <div class="game_quit" id="rpsQuit">Quit</div>
+            </div>
+        </div>
+    </main>
+    <!-- END Game Section -->
+
+    <footer class="tt-c">
+        <a href="https://github.com/MKEzzat/MKED" class="footer_link">
+            <img class="" src="img/icons/github.svg">
+            <p class="footer_link">Github</p>
+        </a>
+        <div class="footer_link"> | </div>
+        <div class="footer_link">Designed by MKED</div>
+    </footer>
+
+
+
+</body>
+
+</html>
