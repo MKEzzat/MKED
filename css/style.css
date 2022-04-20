@@ -196,7 +196,7 @@ img {
 }
 
 .preloader {
-    background: var(--white) url(/repo/img/icons/preloader.gif) no-repeat center center;
+    background: var(--white) no-repeat center center;
     background-size: 40%;
     height: 100%;
     width: 100%;
